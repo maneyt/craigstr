@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
   def admin?
-    true
+    admin
   end
 end
