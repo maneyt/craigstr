@@ -1,6 +1,10 @@
 <h3> <%= @region.name %> </h3>
 <% if current_user.admin? %>
+<<<<<<< HEAD
   <%= render "categories/new_category", category: @category %>
+=======
+  <%= render "categories/new_category", category: @category, region: @region%>
+>>>>>>> Users can create posts within categories, post show
 <% end %>
 
 <ul>

@@ -4,10 +4,11 @@ class CategoriesController < ApplicationController
   def create
     region = Region.find(params[:region_id])
     category = region.categories.create(category_params)
-    redirect_to [region, category]
+    redirect_to category
   end
 
   def show
+    @category = Category.find(params[:id])
   end
 
   private

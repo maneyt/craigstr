@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
-  resources :posts, only: [:index, :new, :create]
+  resources :posts, only: [:index, :show]
   root to: "dashboard#show"
+  resources :categories, only: [:show] do
+    resources :posts, only: [:new, :create]
+  end
   resources :regions, only: [:create, :show] do
     resources :categories, only: [:create]
   end

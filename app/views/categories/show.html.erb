@@ -1,0 +1,6 @@
+<h3> Posts </h3>
+<%= link_to "Create post", [:new, @category, :post] %>
+
+<ul>
+  <%= render @category.posts %>
+</ul>
