@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 20140721174443) do
 
   add_index "categories", ["region_id"], name: "index_categories_on_region_id", using: :btree
 
+  create_table "posts", force: true do |t|
+    t.string   "title",       null: false
+    t.string   "body",        null: false
+    t.integer  "user_id",     null: false
+    t.integer  "category_id", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+
   create_table "regions", force: true do |t|
     t.string   "name",       default: "", null: false
     t.datetime "created_at",              null: false
