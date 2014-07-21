@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
-  before_action :ensure_admin
+  before_action :ensure_admin, only: [:create]
+
   def create
     region = Region.find(params[:region_id])
     category = region.categories.create(category_params)

@@ -1,5 +1,6 @@
 class RegionsController < ApplicationController
-  before_action :ensure_admin
+  before_action :ensure_admin, only: [:create]
+
   def create
     region = Region.create(region_params)
     redirect_to region
