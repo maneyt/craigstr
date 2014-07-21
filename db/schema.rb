@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20140721141632) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                            null: false
-    t.string   "password_digest",                  null: false
+    t.string   "email",                           null: false
+    t.string   "password_digest",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "privilege_type",  default: "user", null: false
+    t.boolean  "admin",           default: false, null: false
   end
 
 end
