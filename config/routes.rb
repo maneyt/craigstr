@@ -5,6 +5,4 @@ Rails.application.routes.draw do
   resources :regions, only: [:create, :show] do
     resources :categories, only: [:create, :show]
   end
-
-
 end

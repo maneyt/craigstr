@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to "/", root_path %>
+<h1><%= link_to "PovertyList", root_path %></h1>
 <% if signed_in? %>
   <p> Signed in as: <%= current_user.email %> </p>
   <%= button_to "Sign out", :session, method: :delete %>
