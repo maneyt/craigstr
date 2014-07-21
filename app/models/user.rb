@@ -1,9 +1,8 @@
 class User < ActiveRecord::Base
-<<<<<<< HEAD
+  has_many :posts
+
   def admin?
     admin
   end
-=======
-  has_many :posts
->>>>>>> Users can add posts.
+  
 end
