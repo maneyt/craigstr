@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :new, :create]
   root to: "dashboard#show"
   resources :regions, only: [:create, :show] do
-    resources :categories, only: [:create, :show]
+    resources :categories, only: [:create]
   end
+  resources :categories, only: [:show]
 end
