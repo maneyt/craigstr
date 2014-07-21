@@ -1,9 +1,14 @@
 class RegionsController < ApplicationController
   before_action :ensure_admin
- 
+
   def create
     region = Region.create(region_params)
     redirect_to region
+  end
+
+  def show
+    @region = Region.find(params[:id])
+    @category = Category.new
   end
 
   private
