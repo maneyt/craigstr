@@ -4,10 +4,10 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title, null: false
       t.string :body, null: false
       t.integer :user_id, null: false
-      t.integer :region_id, null: false
-      t.timestamps
+      t.integer :category_id, null: false
+      t.timestamps null: false
     end
     add_index :posts, :user_id
-    add_index :posts, :region_id
+    add_index :posts, :category_id
   end
 end

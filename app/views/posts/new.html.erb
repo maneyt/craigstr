@@ -4,25 +4,14 @@
 
 <%= form_for @post do |form| %>
   <div>
-  <%= radio_button_tag(:region, "Boston") %>
-  <%= label_tag(:region_boston, "Boston") %>
-
-  <%= radio_button_tag(:region, "New York") %>
-  <%= label_tag(:region_new_york, "New York") %>
-
-  <%= radio_button_tag(:region, "Chicago") %>
-  <%= label_tag(:region_chicago, "Chicago") %>
-</div>
-<div>
   <%= form.label :title %>
   <%= form.text_field :title %>
-</div>
-<div>
+  </div>
+  <div>
   <%= form.label :body %>
   <%= form.text_area :body %>
-</div>
-<div>
+  </div>
+  <div>
   <%= form.submit "Post" %>
-</div>
+  </div>
 <% end %>
-

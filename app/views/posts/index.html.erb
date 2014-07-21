@@ -2,15 +2,11 @@
 
 <% @posts.each do |post| %>
   <div>
-  <h4><%= post.title %></h4>
-</div>
-<div>
-  <p><%= post.body %></p>
-</div>
-<div>
-  <p><%= post.region %></p>
-<div>
-  <p>Date posted: <%= time_tag post.created_at %></p>
+    <h4><%= post.title %></h4>
+  </div>
   <div>
-  <% end %>
-
+    <p><%= post.body %></p>
+  </div>
+    <p>Date posted: <%= time_tag post.created_at %></p>
+  <div>
+<% end %>

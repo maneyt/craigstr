@@ -13,11 +13,12 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(
       :title, 
       :body,
-      :region_id,
+      :category_id,
     )
   end
 end
