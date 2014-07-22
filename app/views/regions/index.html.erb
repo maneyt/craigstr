@@ -1,3 +1,7 @@
+<% if current_user.admin? %>
+  <%= link_to "Admin dashboard", :admin_dashboard %>
+<% end %>
+<%= link_to "User dashboard", :dashboard %>
 <h2>Search for Apartments here (and find jobs)</h2>
 
 <% if current_user.admin? %>
