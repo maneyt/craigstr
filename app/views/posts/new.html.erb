@@ -2,17 +2,17 @@
 
 <%= form_for [@category, @post] do |form| %>
   <div>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
   <div>
-  <%= form.label :body %>
-  <%= form.text_area :body %>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
   </div>
   <div>
-  <%= form.label :url, "Enter Image URL" %>
-  <%= form.text_field :url %>
+    <%= form.label :url, "Enter Image URL" %>
+    <%= form.text_field :url %>
   <div>
-  <%= form.submit "Post" %>
+    <%= form.submit "Post" %>
   </div>
 <% end %>
