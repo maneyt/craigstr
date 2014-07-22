@@ -1,6 +1,7 @@
 <div>
   <h4><%= @post.title %></h4>
   <p><%= @post.body %></p>
+  <%= image_tag @post.url %>
   <span class="timestamp">Posted <%= time_ago_in_words @post.created_at %> ago</span>
   <%= button_to "Mark as spam", [@post, :spams] %>
   <% if current_user.can_delete?(@post) %> 
