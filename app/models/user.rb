@@ -4,5 +4,8 @@ class User < ActiveRecord::Base
   def admin?
     admin
   end
-  
+ 
+  def can_delete?(post)
+    id == post.user_id
+  end 
 end
