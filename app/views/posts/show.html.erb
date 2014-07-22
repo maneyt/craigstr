@@ -1,6 +1,6 @@
 <div>
   <h4><%= @post.title %></h4>
   <p><%= @post.body %></p>
-  <span style="font-size: .8em;">Posted <%= time_ago_in_words @post.created_at %> ago</span>
-  <%= link_to "Mark as spam", @post, method: :patch %>
+  <span class="timestamp">Posted <%= time_ago_in_words @post.created_at %> ago</span>
+  <%= button_to "Mark as spam", [@post, :spams] %>
 </div>

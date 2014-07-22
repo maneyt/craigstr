@@ -21,7 +21,6 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.mark_as_spam
-    post.save
     redirect_to :post
   end
 

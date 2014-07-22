@@ -5,6 +5,6 @@ class Post < ActiveRecord::Base
   validates :category_id, presence: true
 
   def mark_as_spam
-    spam = true
+    update(spam: true)
   end
 end
