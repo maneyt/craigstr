@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     resources :categories, only: [:create]
   end
   resources :categories, only: [:show]
-  resource :dashboards, only: [:show], as: :dashboard
+  resource :dashboard, only: [:show]
 end
