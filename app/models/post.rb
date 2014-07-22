@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
     update(spam: true)
   end
 
-  def self.spam_posts
+  def self.spam
     where(spam: true)
   end
 end
