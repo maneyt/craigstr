@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_action :ensure_user_can_destroy_post, only: [:destroy]
-  before_action :require_login
 
   def new
     @post = Post.new
