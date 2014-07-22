@@ -1,3 +1,7 @@
 .timestamp {
   font-size: .8em;
 }
+
+#edit_form {
+  display: none
+}

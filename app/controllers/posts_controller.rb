@@ -26,6 +26,13 @@ class PostsController < ApplicationController
     post = current_user.posts.create(post_params.merge(category_id: category.id))
     redirect_to category
   end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params.merge(category_id: post.category.id))
+    redirect_to post
+  end
+
   private
 
   def post_params
