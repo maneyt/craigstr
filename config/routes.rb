@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root to: "regions#index"
   resources :posts, only: [:index, :show, :destroy]
   resources :categories, only: [:show] do
-    resources :posts, only: [:new, :create]
+    resources :posts, only: [:create]
   end
   resources :regions, only: [:create, :show] do
     resources :categories, only: [:create]
