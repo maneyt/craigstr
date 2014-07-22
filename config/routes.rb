@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
-  resources :posts, only: [:index, :show, :update] do
+  resources :posts, only: [:index, :show] do
     resources :spams, only: [:create]
   end
   root to: "regions#index"
+  resources :posts, only: [:index, :show, :destroy]
   resources :categories, only: [:show] do
     resources :posts, only: [:new, :create]
   end
