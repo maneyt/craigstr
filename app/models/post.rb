@@ -7,4 +7,8 @@ class Post < ActiveRecord::Base
   def mark_as_spam
     update(spam: true)
   end
+
+  def self.spam_posts
+    where(spam: true)
+  end
 end

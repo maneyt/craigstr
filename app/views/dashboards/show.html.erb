@@ -2,3 +2,10 @@
 <ul>
   <%= render @posts %>
 </ul>
+
+<% if current_user.admin? %>
+  <h3> Marked as spam </h3>
+  <ul>
+    <%= render @spam_posts %>
+  </ul>
+<% end %>
