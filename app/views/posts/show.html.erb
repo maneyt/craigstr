@@ -1,3 +1,6 @@
-<h4><%= @post.title %></h4>
-<p><%= @post.body %> </p>
-<%= time_ago_in_words @post.created_at %> ago
+<div>
+  <h4><%= @post.title %></h4>
+  <p><%= @post.body %></p>
+  <span style="font-size: .8em;">Posted <%= time_ago_in_words @post.created_at %> ago</span>
+  <%= link_to "Mark as spam", @post, method: :patch %>
+</div>

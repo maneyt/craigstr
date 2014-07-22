@@ -18,6 +18,13 @@ class PostsController < ApplicationController
     redirect_to category
   end
 
+  def update
+    post = Post.find(params[:id])
+    post.mark_as_spam
+    post.save
+    redirect_to :post
+  end
+
   private
 
   def post_params
