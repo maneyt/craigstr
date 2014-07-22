@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @posts = @category.posts.sort_descending.page params[:page]
+    @posts = @category.posts.recent_first.page params[:page]
   end
 
   private

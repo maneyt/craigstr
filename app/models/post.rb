@@ -15,7 +15,7 @@ class Post < ActiveRecord::Base
     where(spam: true)
   end
 
-  def self.sort_descending
+  def self.recent_first
     order('created_at DESC')
   end
 end
