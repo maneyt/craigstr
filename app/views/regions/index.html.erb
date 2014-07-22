@@ -1,12 +1,19 @@
-<% if current_user.admin? %>
-  <%= link_to "Admin dashboard", :admin_dashboard %>
+<% if current_user %>
+  <% if current_user.admin? %>
+    <%= link_to "Admin dashboard", :admin_dashboard %>
+  <% end %>
+  <%= link_to "User dashboard", :dashboard %>
+<% else %>
+  <%= link_to "Sign in", [:new, :session] %>
+  <%= link_to "Sign up", [:new, :user] %>
 <% end %>
-<%= link_to "User dashboard", :dashboard %>
 <h2>Search for Apartments here (and find jobs)</h2>
 
-<% if current_user.admin? %>
-  <h4>Add a new region</h4>
-  <%= render "new_region", region: @region %>
+<% if current_user %>
+  <% if current_user.admin? %>
+    <h4>Add a new region</h4>
+    <%= render "new_region", region: @region %>
+  <% end %>
 <% end %>
 
 <h4>Regions</h4>

@@ -1,6 +1,8 @@
 <h3> <%= @region.name %> </h3>
-<% if current_user.admin? %>
-  <%= render "categories/new_category", {category: @category, region: @region} %>
+<% if current_user %>
+  <% if current_user.admin? %>
+    <%= render "categories/new_category", {category: @category, region: @region} %>
+  <% end %>
 <% end %>
 
 <ul>

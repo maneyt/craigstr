@@ -1,11 +1,12 @@
+require "monban/constraints/signed_in"
+require "monban/constraints/signed_out"
+
 Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
-  resources :posts, only: [:index, :show] do
+  resources :posts, only: [:index, :show, :update] do
     resources :spams, only: [:create]
   end
-  root to: "regions#index"
-  resources :posts, only: [:index, :show, :destroy]
   resources :categories, only: [:show] do
     resources :posts, only: [:new, :create]
   end
@@ -15,4 +16,6 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
   resource :dashboard, only: [:show]
   resource :admin_dashboard, only: [:show]
+
+  root to: "regions#index"
 end
