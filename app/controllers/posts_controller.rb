@@ -8,6 +8,13 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @category = Category.find(@post.category_id)
+    @post.destroy
+    redirect_to @category
+  end
+
   def show
     @post = Post.find(params[:id])
   end

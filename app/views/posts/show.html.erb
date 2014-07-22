@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 <div>
   <h4><%= @post.title %></h4>
   <p><%= @post.body %></p>
   <span class="timestamp">Posted <%= time_ago_in_words @post.created_at %> ago</span>
   <%= button_to "Mark as spam", [@post, :spams] %>
 </div>
+=======
+<h4><%= @post.title %></h4>
+<p><%= @post.body %> </p>
+<%= time_ago_in_words @post.created_at %> ago
+<%= button_to "Delete post", @post, method: :delete %>
+>>>>>>> Users can delete posts
