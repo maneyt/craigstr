@@ -3,7 +3,7 @@
 
 <% if current_user.admin? %>
   <h4>Add a new region</h4>
-  <%= render "/regions/new_region", region: @region %>
+  <%= render "new_region", region: @region %>
 <% end %>
 
 <h4>Regions</h4>
