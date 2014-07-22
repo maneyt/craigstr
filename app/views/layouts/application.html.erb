@@ -12,6 +12,10 @@
   <p> Signed in as: <%= current_user.email %> </p>
   <%= button_to "Sign out", :session, method: :delete %>
 <% end %>
+<% if current_user.admin? %>
+  <%= link_to "Admin dashboard", :admin_dashboard %>
+<% end %>
+<%= link_to "User dashboard", :dashboard %>
 <%= yield %>
 
 </body>
