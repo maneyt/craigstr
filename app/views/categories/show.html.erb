@@ -1,5 +1,5 @@
 <h3>Posts</h3>
-<% if current_user %>
+<% if signed_in?%>
   <%= link_to "Create post", [:new, @category, :post] %>
 <% end %>
 
