@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :ensure_current_user, only: [:destroy]
+  before_action :ensure_user_can_destroy_post, only: [:destroy]
+
   def new
     @post = Post.new
     @category = Category.find(params[:category_id])
