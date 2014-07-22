@@ -3,6 +3,7 @@ class RegionsController < ApplicationController
 
   def index
     @regions = Region.all
+    @region = Region.new
   end
 
   def create
