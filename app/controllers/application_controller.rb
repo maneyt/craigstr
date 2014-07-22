@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+
+  def ensure_current_user
+    post = Post.find(params[:id])
+    unless current_user.can_delete?(post)
+      flash[:error] = "You cannot delete post that do not belong to you"
+      redirect_to root_path
+    end
+  end
 end
