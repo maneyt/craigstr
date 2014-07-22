@@ -2,11 +2,6 @@ class PostsController < ApplicationController
   before_action :ensure_user_can_destroy_post, only: [:destroy]
   before_action :require_login
 
-  def new
-    @post = Post.new
-    @category = Category.find(params[:category_id])
-  end
-
   def index
     @posts = Post.all
   end

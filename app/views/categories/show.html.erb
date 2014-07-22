@@ -1,6 +1,20 @@
-<h3>Posts</h3>
-<%= link_to "Create post", [:new, @category, :post] %>
+<h2> Make a new post </h2>
+<%= form_for [@category, @post] do |form| %>
+  <div>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  </div>
+  <div>
+  <%= form.label :body %>
+  <%= form.text_area :body %>
+  </div>
 
+  <div>
+    <%= form.submit "Post", html: {id: "submit_post"}  %>
+  </div>
+<% end %>
+
+<h3>Posts</h3>
 <ul>
   <%= render @category.posts %>
 </ul>
