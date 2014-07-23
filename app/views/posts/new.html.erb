@@ -2,16 +2,13 @@
 
 <%= form_for [@category, @post] do |form| %>
   <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: "Post Title", class: "form-control" %>
   </div>
   <div>
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, placeholder: "Post Body", class: "form-control" %>
   </div>
   <div>
-    <%= form.label :url, "Enter Image URL" %>
-    <%= form.text_field :url %>
+    <%= form.text_field :url, placeholder: "Enter Image URL", class: "form-control" %>
   <div>
     <%= form.submit "Post", class: "btn" %>
   </div>

@@ -1,0 +1,26 @@
+body {
+  font-family: Lato;
+}
+
+.container {
+  width: 80em;
+}
+
+.button {
+  padding: .5em;
+  float: left;
+}
+
+.header {
+  clear: left;
+}
+
+.form-control {
+  margin-top: .5em ;
+  margin-bottom: .5em;
+}
+
+.btn {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}

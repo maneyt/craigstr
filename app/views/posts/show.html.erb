@@ -5,24 +5,21 @@
   <%= image_tag @post.url %>
   <span class="timestamp">Posted <%= time_tag @post.created_at %></span>
 <% if signed_in?%>
-  <%= button_to "Mark as spam", [@post, :spams] %>
+  <%= button_to "Mark as spam", [@post, :spams], class: "btn" %>
   <% if current_user.can_delete?(@post) %> 
-    <%= button_to "Delete post", @post, method: :delete %>
+    <%= button_to "Delete post", @post, method: :delete, class: "btn" %>
 
     <%= form_for @post do |form| %>
       <div>
-        <%= form.label :title %>
-        <%= form.text_field :title %>
+        <%= form.text_field :title, placeholder: "Post Title", class: "form-control" %>
       </div>
       <div>
-        <%= form.label :body %>
-        <%= form.text_area :body %>
+        <%= form.text_area :body, placeholder: "Post Body", class: "form-control" %>
       </div>
       <div>
-        <%= form.label "Image URL" %>
-        <%= form.text_field :url %>
+        <%= form.text_field :url, placeholder: "Enter Image URL", class: "form-control" %>
       </div>
-        <%= form.submit "edit post" %>
+        <%= form.submit "edit post", class: "btn" %>
     <% end %>
 
     <%= link_to "Edit post", "#", id: "edit-button" %>

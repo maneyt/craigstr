@@ -16,30 +16,3 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap/theme";
-
-body {
-  font-family: Lato;
-}
-
-.container {
-  width: 75em;
-}
-
-.button {
-  padding: .5em;
-  float: left;
-}
-
-.header {
-  clear: left;
-}
-
-.form-control {
-  margin-top: .5em ;
-  margin-bottom: .5em;
-}
-
-.btn {
-  margin-top: .5em;
-  margin-bottom: .5em;
-}

@@ -1,9 +1,9 @@
 <% if signed_in?%>
   <% if current_user.admin? %>
-    <%= link_to "Admin dashboard", :admin_dashboard %>
+    <h4><%= link_to "Admin dashboard", :admin_dashboard, class: "link" %> |
   <% end %>
-  <%= link_to "User dashboard", :dashboard %>
-<% else %>
+    <%= link_to "User dashboard", :dashboard %></h4>
+  <% else %>
   <div class="button">
     <%= button_to "Sign in", [:new, :session], method: :get, class: "btn" %>
   </div>
@@ -11,9 +11,11 @@
     <%= button_to "Sign up", [:new, :user], method: :get, class: "btn" %>
   </div>
 <% end %>
+
 <div class="header">
-<h2>Search for Apartments here (and find jobs)</h2>
+  <p>Search for apartments, jobs, and classifieds</p>
 </div>
+
 <% if signed_in? %>
   <% if current_user.admin? %>
     <h4>Add a new region</h4>
