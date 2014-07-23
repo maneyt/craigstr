@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-  $("#submit_post").on("click", function() {
+  $("#submit_post").click(function() {
     var formElement = $("#new_post");
-    var promise = $.ajax({
+    $.ajax({
       type: "POST",
         url: formElement.prop("action"),
         data: formElement.serialize()
