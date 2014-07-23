@@ -13,8 +13,7 @@ $(document).ready(function(){
     fail(function(xhr){
       alert("Message failed. Cannot reach server.");
     });
-    $("#post_title").val("");
-    $("#post_body").val("");
+    $("#post_title, #post_body").val("");
     return false;
   });
 });
