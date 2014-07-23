@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
+  has_many :post_responses
 
   validates :title, presence: true
   validates :body, presence: true

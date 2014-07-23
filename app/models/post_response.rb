@@ -1,4 +1,6 @@
 class PostResponse < ActiveRecord::Base
-  belongs_to :recipient, class_name: "User"
   belongs_to :post
+
+  validates :message, presence: true
+  validates :post_id, presence: true
 end
