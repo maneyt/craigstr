@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     @user = sign_up(user_params)
 
     if @user.valid?
-      UserMailer.welcome_email(@user).deliver
       sign_in(@user)
       redirect_to root_path
     else

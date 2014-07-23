@@ -1,8 +1,10 @@
 class UserMailer < ActionMailer::Base
   default from: "reponse@PovertyList.com"
 
-  def welcome_email(user)
-    @user = user
-    mail to: @user.email, subject: "TEST EMAIL"
+  def post_response(post, response)
+    @post = post
+    @user = post.user
+    @response = response
+    mail to: @user.email, subject: "Craiglist post response"
   end
 end

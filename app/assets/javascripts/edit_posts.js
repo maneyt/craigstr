@@ -3,4 +3,9 @@ $(document).ready(function() {
     $(".edit_post").show();
     return false;
   });
+
+  $("#post-response").click(function(event){
+    event.preventDefault();
+    $(".new_mail_response").show();
+  });
 });

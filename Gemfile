@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 gem 'monban-generators'
 
 gem 'kaminari'
+gem 'jquery-turbolinks'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 

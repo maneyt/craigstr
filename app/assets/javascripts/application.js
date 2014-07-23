@@ -12,7 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+<<<<<<< HEAD
 //= require turbolinks
 //= require_tree 
 //= require jquery
 //= require bootstrap-sprockets
+=======
+//= require jquery.turbolinks
+//= require_tree .
+>>>>>>> Users can respond to posts, sends email message to the poster

@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @mail_response = MailResponse.new
   end
 
   def create
