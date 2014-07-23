@@ -1,6 +1,6 @@
 <div>
   <%= form_for [region, category] do |form| %>
     <%= form.text_field :title, placeholder: "Enter category name" %>
-    <%= form.submit "Create category" %>
+    <%= form.submit "Create category", class: "btn" %>
   <% end %>
 </div>

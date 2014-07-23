@@ -4,12 +4,17 @@
   <% end %>
   <%= link_to "User dashboard", :dashboard %>
 <% else %>
-  <%= link_to "Sign in", [:new, :session] %>
-  <%= link_to "Sign up", [:new, :user] %>
+  <div class="button">
+    <%= button_to "Sign in", [:new, :session], method: :get, class: "btn" %>
+  </div>
+  <div class="button">
+    <%= button_to "Sign up", [:new, :user], method: :get, class: "btn" %>
+  </div>
 <% end %>
+<div class="header">
 <h2>Search for Apartments here (and find jobs)</h2>
-
-<% if signed_in?%>
+</div>
+<% if signed_in? %>
   <% if current_user.admin? %>
     <h4>Add a new region</h4>
     <%= render "new_region", region: @region %>
