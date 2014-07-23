@@ -10,7 +10,7 @@
 <h1><%= link_to "PovertyList", root_path %></h1>
 <% if signed_in? %>
   <p> Signed in as: <%= current_user.email %> </p>
-  <%= button_to "Sign out", :session, method: :delete %>
+  <%= button_to "Sign out", :session, method: :delete, class: "btn" %>
 <% end %>
 <%= yield %>
 
