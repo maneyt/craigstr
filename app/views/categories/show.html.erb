@@ -1,7 +1,7 @@
 <h2>Make a new post</h2>
-<ul id="errors">
-  <li id="error"><%= flash[:error] %></li>
-</ul>
+<p id="success"></p>
+<p id="error"></p>
+<%= render "error_messages" %>
 <%= form_for [@category, @post] do |form| %>
   <div>
     <%= form.label :title %>

@@ -1,0 +1,8 @@
+<% if @post.errors.any? %>
+  <h2><%= pluralize @post.errors.count, "error" %> prevented the form from saving:</h2>
+  <ul>
+    <% @post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>

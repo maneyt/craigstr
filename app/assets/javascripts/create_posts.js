@@ -7,14 +7,18 @@ $(document).ready(function(){
       url: formElement.prop("action"),
       data: formElement.serialize()
     }).
-    fail(function(xhr){
-      $("#errors").css('visibility', 'visible');
+    fail(function(html){
+      $("#success").hide();
+      $("#error").show();
+      $("#error").html(html.responseText);
     }).
     done(function (data) {
       $("#posts_list").append(data); 
     });
     $("#post_title, #post_body").val("");
-    $("#errors").css('visibility', 'hidden');
+    $("#error").hide();
+    $("#success").text("Post submitted!");
+    $("#success").show();
     return false;
   });
 });

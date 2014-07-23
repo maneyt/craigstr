@@ -2,6 +2,12 @@
   font-size: .8em;
 }
 
-#errors {
-  visibility: hidden;
+#error {
+  display: none;
+  color: red;
+}
+
+#success {
+  display: none;
+  color: green;
 }

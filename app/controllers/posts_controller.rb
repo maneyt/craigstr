@@ -23,8 +23,7 @@ class PostsController < ApplicationController
     if @post.save
       render @post
     else
-      flash[:error] = "Error has occurred! Could not save post"
-      redirect_to :categories => :show
+      render partial: "error_messages", target: @post, status: 422
     end
   end
   private
