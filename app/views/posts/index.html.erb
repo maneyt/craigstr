@@ -2,7 +2,7 @@
 
 <%= form_for @post do |form| %>
   <div>
-  <%= collection_radio_buttons :post, :category_id, Category.all, :id, :title %>
+    <%= collection_radio_buttons :post, :category_id, Category.all, :id, :title %>
   </div>
   <div>
     <%= form.text_field :title, placeholder: "Post Title", class: "form-control" %>

@@ -20,10 +20,4 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
-
-  def ensure_signed_in
-    unless signed_in?
-      redirect_to "/session/new"
-    end
-  end
 end
