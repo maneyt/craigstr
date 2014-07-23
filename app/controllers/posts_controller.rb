@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   def create
     category = Category.find(params[:category_id])
     @post = current_user.posts.create(post_params.merge(category_id: category.id))
-    render @post, status: 200
+    render @post
   end
   private
 
