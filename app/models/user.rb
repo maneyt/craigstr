@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   def can_delete?(post)
-    admin? || id == post.user_id
+    admin? || current_users_post?(post)
+  end
+
+  def current_users_post?(post)
+    id == post.user_id
   end
 end
