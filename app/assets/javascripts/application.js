@@ -13,11 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 <<<<<<< HEAD
-//= require turbolinks
+<<<<<<< HEAD
 //= require_tree 
 //= require jquery
 //= require bootstrap-sprockets
 =======
-//= require jquery.turbolinks
+=======
+>>>>>>> Remove turbolinks from application.js
 //= require_tree .
 >>>>>>> Users can respond to posts, sends email message to the poster
