@@ -14,9 +14,10 @@ $(document).ready(function(){
     }).
     done(function (data) {
       $("#posts_list").append(data); 
+      $("#error").hide();
+      $("#success").show();
     });
     $("#post_title, #post_body").val("");
-    $("#error").hide();
     $("#success").text("Post submitted!");
     $("#success").show();
     return false;
