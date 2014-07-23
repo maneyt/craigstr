@@ -14,6 +14,7 @@ $(document).ready(function(){
       $("#posts_list").append(data); 
     });
     $("#post_title, #post_body").val("");
+    $("#errors").css('visibility', 'hidden');
     return false;
   });
 });

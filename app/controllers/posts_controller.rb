@@ -19,8 +19,10 @@ class PostsController < ApplicationController
 
   def create
     category = Category.find(params[:category_id])
-    @post = current_user.posts.create(post_params.merge(category_id: category.id))
-    render @post
+    @post = current_user.posts.new(post_params.merge(category_id: category.id))
+    if @post.save
+      render @post
+    end
   end
   private
 
