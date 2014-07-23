@@ -22,6 +22,9 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params.merge(category_id: category.id))
     if @post.save
       render @post
+    else
+      flash[:error] = "Error has occurred! Could not save post"
+      redirect_to :categories => :show
     end
   end
   private

@@ -1,6 +1,6 @@
 <h2>Make a new post</h2>
 <ul id="errors">
-  <li>Error has occurred! Could not save post</li>
+  <li id="error"><%= flash[:error] %></li>
 </ul>
 <%= form_for [@category, @post] do |form| %>
   <div>
