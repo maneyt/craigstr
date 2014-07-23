@@ -2,7 +2,6 @@
 <% if current_user.admin? %>
   <%= render "categories/new_category", {category: @category, region: @region} %>
 <% end %>
-
 <ul>
   <%= render @region.categories %>
 </ul>

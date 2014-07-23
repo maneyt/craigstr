@@ -5,5 +5,5 @@
   <%= button_to "Mark as spam", [@post, :spams] %>
   <% if current_user.can_delete?(@post) %> 
     <%= button_to "Delete post", @post, method: :delete %>
-<% end %>
+  <% end %>
 </div>
