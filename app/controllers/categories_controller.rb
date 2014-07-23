@@ -3,8 +3,12 @@ class CategoriesController < ApplicationController
 
   def create
     region = Region.find(params[:region_id])
-    category = region.categories.create(category_params)
-    redirect_to category
+    category = region.categories.new(category_params)
+    if category.save
+      redirect_to category
+    else
+      redirect_to region
+    end
   end
 
   def show
