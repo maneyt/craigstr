@@ -5,6 +5,6 @@ class UserMailer < ActionMailer::Base
     @post = post
     @user = post.user
     @response = response
-    mail to: @user.email, subject: "Craiglist response:#{@post.title}"
+    mail to: @user.email, subject: "Craiglist:#{@post.title} response"
   end
 end
