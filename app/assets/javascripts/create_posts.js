@@ -11,7 +11,7 @@ $(document).ready(function(){
       $("#posts_list").append(data); 
     }).
     fail(function(xhr){
-      alert("Message failed. Cannot reach server.");
+      $("#errors").append("<li>Error has occured! Could not save post</li>");
     });
     $("#post_title, #post_body").val("");
     return false;
