@@ -16,10 +16,9 @@ $(document).ready(function(){
       $("#posts_list").append(data); 
       $("#error").hide();
       $("#success").show();
+      $("#success").text("Post submitted!");
     });
     $("#post_title, #post_body").val("");
-    $("#success").text("Post submitted!");
-    $("#success").show();
     return false;
   });
 });
