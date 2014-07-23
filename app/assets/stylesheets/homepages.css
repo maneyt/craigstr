@@ -9,3 +9,7 @@
 .new_post_response {
   display: none;
 }
+
+#post-responses {
+  display: none;
+}

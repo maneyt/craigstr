@@ -8,4 +8,9 @@ $(document).ready(function() {
     event.preventDefault();
     $(".new_post_response").show();
   });
+
+  $("#post-response-toggle").click(function(event){
+    event.preventDefault();
+    $("#post-responses").toggle();
+  });
 });

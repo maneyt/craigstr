@@ -3,9 +3,9 @@
   <%= render @posts %>
 </ul>
 
-<h3>Post responses</h3>
-<ul>
+<h3><%= link_to "Post responses", "#", id: "post-response-toggle" %></h3>
+<ul id="post-responses">
   <% current_user.post_responses.each do |response| %>
-    <li><%= link_to response.post.title, response.post %>><%= response.message %></li>
+    <li><%= link_to response.post.title, response.post %> > <%= response.message %></li>
   <% end %>
 </ul>
