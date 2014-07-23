@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
 
   def index
+    @post = Post.new
     @posts = Post.all
   end
 
@@ -23,9 +24,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    category = Category.find(params[:category_id])
-    post = current_user.posts.create(post_params.merge(category_id: category.id))
-    redirect_to category
+    post = current_user.posts.create(post_params)
+    redirect_to post.category
   end
 
   def update
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(
-      :title, 
+      :title,
       :body,
       :category_id,
       :url,

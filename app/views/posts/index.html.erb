@@ -1,3 +1,22 @@
+<h2>Add a new post</h2>
+
+<%= form_for @post do |form| %>
+  <div>
+  <%= collection_radio_buttons :post, :category_id, Category.all, :id, :title %>
+  </div>
+  <div>
+    <%= form.text_field :title, placeholder: "Post Title", class: "form-control" %>
+  </div>
+  <div>
+    <%= form.text_area :body, placeholder: "Post Body", class: "form-control" %>
+  </div>
+  <div>
+    <%= form.text_field :url, placeholder: "Enter Image URL", class: "form-control" %>
+  <div>
+    <%= form.submit "Post", class: "btn" %>
+  </div>
+<% end %>
+
 <h2>All of the posts on craigstr</h2>
 
 <% @posts.each do |post| %>
