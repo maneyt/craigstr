@@ -26,7 +26,7 @@
   <% end %>
 
   <%= link_to "Respond to post" , "", id: "post-response" %>
-  <%= form_for [@post, @mail_response]  do |form| %>
+  <%= form_for [@post, @post_response]  do |form| %>
     <%= form.text_area :message, placeholder: "Enter message" %>
     <%= form.submit "Send messasge" %>
   <% end %>

@@ -6,6 +6,6 @@ $(document).ready(function() {
 
   $("#post-response").click(function(event){
     event.preventDefault();
-    $(".new_mail_response").show();
+    $(".new_post_response").show();
   });
 });

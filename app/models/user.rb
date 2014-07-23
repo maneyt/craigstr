@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :posts
+  has_many :post_responses, foreign_key: :recipient_id
 
   validates :email, uniqueness: true
 

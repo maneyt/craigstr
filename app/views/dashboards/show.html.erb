@@ -2,3 +2,10 @@
 <ul>
   <%= render @posts %>
 </ul>
+
+<h3>Post responses</h3>
+<ul>
+  <% current_user.post_responses.each do |response| %>
+    <li><%= link_to response.post.title, response.post %>><%= response.message %></li>
+  <% end %>
+</ul>
