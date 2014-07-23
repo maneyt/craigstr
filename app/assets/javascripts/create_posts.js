@@ -4,14 +4,14 @@ $(document).ready(function(){
     var formElement = $("#new_post");
     $.ajax({
       type: "POST",
-        url: formElement.prop("action"),
-        data: formElement.serialize()
+      url: formElement.prop("action"),
+      data: formElement.serialize()
     }).
     done(function (data) {
       $("#posts_list").append(data); 
     }).
     fail(function(xhr){
-      alert(xhr);
+      alert("Message failed. Cannot reach server.");
     });
     $("#post_title").val("");
     $("#post_body").val("");
