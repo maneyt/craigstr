@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
     admin? || current_users_post?(post)
   end
 
+  private
+
   def current_users_post?(post)
     id == post.user_id
   end
