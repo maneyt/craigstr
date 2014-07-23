@@ -1,5 +1,7 @@
-<h2> Make a new post </h2>
-<ul id="errors"></ul>
+<h2>Make a new post</h2>
+<ul id="errors">
+  <li>Error has occurred! Could not save post</li>
+</ul>
 <%= form_for [@category, @post] do |form| %>
   <div>
     <%= form.label :title %>

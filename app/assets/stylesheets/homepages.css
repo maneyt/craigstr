@@ -1,3 +1,7 @@
 .timestamp {
   font-size: .8em;
 }
+
+#errors {
+  visibility: hidden;
+}
