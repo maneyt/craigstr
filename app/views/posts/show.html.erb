@@ -8,23 +8,23 @@
   <%= button_to "Mark as spam", [@post, :spams] %>
   <% if current_user.can_delete?(@post) %> 
     <%= button_to "Delete post", @post, method: :delete %>
-    <div>
-      <%= form_for @post do |form| %>
-        <div>
-          <%= form.label :title %>
-          <%= form.text_field :title %>
-        </div>
-        <div>
-          <%= form.label :body %>
-          <%= form.text_area :body %>
-        </div>
-        <div>
-          <%= form.label "Image URL" %>
-          <%= form.text_field :url %>
-        </div>
-          <%= form.submit "edit post" %>
-      <% end %>
-    </div>
+
+    <%= form_for @post do |form| %>
+      <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
+      <div>
+        <%= form.label :body %>
+        <%= form.text_area :body %>
+      </div>
+      <div>
+        <%= form.label "Image URL" %>
+        <%= form.text_field :url %>
+      </div>
+        <%= form.submit "edit post" %>
+    <% end %>
+
     <%= link_to "Edit post", "#", id: "edit-button" %>
   <% end %>
 <% end %>
