@@ -5,10 +5,13 @@ Rails.application.routes.draw do
     resources :spams, only: [:create]
     resources :post_responses, only: [:create]
   end
-  resources :categories, only: [:show, :new] 
-  resources :regions, only: [:create, :show] do
+  resources :categories, only: [:show, :new]
+
+  get ":name", to: "regions#show", as: :region
+  resources :regions, only: [:create] do
     resources :categories, only: [:create]
   end
+
   resources :categories, only: [:show]
   resource :dashboard, only: [:show]
   resource :admin_dashboard, only: [:show]

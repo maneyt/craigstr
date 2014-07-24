@@ -7,12 +7,16 @@ class RegionsController < ApplicationController
   end
 
   def create
-    region = Region.create(region_params)
-    redirect_to region
+    region = Region.new(region_params)
+    if region.save
+      redirect_to region
+    else
+      redirect_to root_path
+    end
   end
 
   def show
-    @region = Region.find(params[:id])
+    @region = Region.find_by(name: params[:name])
     @category = Category.new
   end
 

@@ -1,3 +1,4 @@
+<h2><%= link_to @category.region.name, @category.region %>/<%= @category.title %></h2>
 <h3>Posts</h3>
 <% if signed_in?%>
   <%= link_to "Create post", [:posts] %>

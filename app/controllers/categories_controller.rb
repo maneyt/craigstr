@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :ensure_admin, only: [:create]
 
   def create
-    region = Region.find(params[:region_id])
+    region = Region.find_by(name: params[:region_id])
     category = region.categories.new(category_params)
     if category.save
       redirect_to category
