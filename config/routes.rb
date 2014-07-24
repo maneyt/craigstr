@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
   resource :dashboard, only: [:show]
   resource :admin_dashboard, only: [:show]
-  get ":name", to: "regions#show", as: :region
+  get ":slug", to: "regions#show", as: :region
 
   root to: "regions#index"
 end
