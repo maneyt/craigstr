@@ -7,6 +7,11 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
   validates :user_id, presence: true
   validates :category_id, presence: true
+  validates_length_of :title, minimum: 10, maximum: 60
+  validates_length_of :body, minimum: 10, maximum: 750
+  
+
+
   paginates_per 10
   
   def mark_as_spam
