@@ -1,6 +1,6 @@
 class SearchesController < ApplicationController
   def show
-    @search_results = Post.where("search_cache ILIKE ?","%#{ search_term }%")
+    @posts = Post.where("search_cache ILIKE ?","%#{ search_term }%")
   end
 
   private

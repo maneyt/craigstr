@@ -1,2 +1,7 @@
 <h2>Results</h2>
-<%= render @search_results %>
+<% @posts.each do |post| %>
+  <%= link_to post.title, post %> |
+  <%= post.category.region.name %> |
+  <%= post.category.title %> 
+<% end %>
+
