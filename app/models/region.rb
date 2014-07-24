@@ -14,6 +14,10 @@ class Region < ActiveRecord::Base
   private
 
   def to_slug
-    name.gsub(/[^\w\d -]/, "") << "-"+ id.to_s
+    [clean_name, id.to_s].join("-")
+  end
+
+  def clean_name
+    name.gsub(/[^\w\d -]/, "")
   end
 end
