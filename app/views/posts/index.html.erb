@@ -1,5 +1,10 @@
 <h2>Add a new post</h2>
-<%= render "error_messages" %>
+
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <%= render "error_messages", post: @post %>
+  <% end %>
+<% end %>
 
 <%= form_for @post do |form| %>
   <div>
