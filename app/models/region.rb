@@ -1,7 +1,7 @@
 class Region < ActiveRecord::Base
   has_many :categories
 
-  validates :name, uniqueness: true, presence: true, format: { with: /\A[a-zA-Z0-9 ]*\z/ }
+  validates :name, uniqueness: true, presence: true
 
   def to_param
     to_slug
