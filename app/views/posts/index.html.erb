@@ -1,9 +1,7 @@
 <h2>Add a new post</h2>
 
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <%= render "error_messages", post: @post %>
-  <% end %>
+<% if @post.errors.any? %>
+  <%= render "error_messages", post: @post %>
 <% end %>
 
 <%= form_for @post do |form| %>
