@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140724145231) do
     t.datetime "updated_at",                   null: false
     t.boolean  "spam",         default: false, null: false
     t.string   "url",          default: "",    null: false
-    t.string   "search_cache", default: "",    null: false
+    t.text     "search_cache", default: "",    null: false
   end
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
