@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140724202714) do
-=======
-ActiveRecord::Schema.define(version: 20140724145231) do
->>>>>>> Users can search by region, category, and title
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
