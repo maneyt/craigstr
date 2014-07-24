@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140724202714) do
+=======
+ActiveRecord::Schema.define(version: 20140724145231) do
+>>>>>>> Users can search by region, category, and title
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,14 +39,15 @@ ActiveRecord::Schema.define(version: 20140724202714) do
   add_index "post_responses", ["post_id"], name: "index_post_responses_on_post_id", using: :btree
 
   create_table "posts", force: true do |t|
-    t.string   "title",                       null: false
-    t.string   "body",                        null: false
-    t.integer  "user_id",                     null: false
-    t.integer  "category_id",                 null: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.boolean  "spam",        default: false, null: false
-    t.string   "url",         default: "",    null: false
+    t.string   "title",                        null: false
+    t.string   "body",                         null: false
+    t.integer  "user_id",                      null: false
+    t.integer  "category_id",                  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.boolean  "spam",         default: false, null: false
+    t.string   "url",          default: "",    null: false
+    t.string   "search_cache",                 null: false
   end
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree

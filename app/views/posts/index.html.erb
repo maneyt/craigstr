@@ -23,10 +23,16 @@
 
 <h2>All of the posts on craigstr</h2>
 
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search posts:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search", class: "btn") %>
+<% end %>
+
 <% @posts.each do |post| %>
   <h3><%= link_to post.category.region.name, post.category.region %>/<%= link_to post.category.title, post.category %></h3>
   <div>
-    <h4><%= post.title %></h4>
+    <h4><%= link_to post.title, post %></h4>
   </div>
   <div>
     <p><%= post.body %></p>

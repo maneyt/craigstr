@@ -25,6 +25,8 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
+    post.search_cache = PostDenormalizer.new(post).search_cache
+ 
     if @post.save
       redirect_to @post.category
     else
