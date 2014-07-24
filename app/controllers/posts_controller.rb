@@ -24,8 +24,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = current_user.posts.create(post_params)
-    redirect_to post.category
+    @post = current_user.posts.new(post_params)
+    if @post.save
+      redirect_to @post.category
+    else
+      @posts = Post.all
+      render :index
+    end
   end
 
   def update
