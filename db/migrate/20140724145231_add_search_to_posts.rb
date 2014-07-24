@@ -1,5 +1,5 @@
 class AddSearchToPosts < ActiveRecord::Migration
   def change
-    add_column :posts, :search_cache, :string, null: false
+    add_column :posts, :search_cache, :string, null: false, default: ""
   end
 end
