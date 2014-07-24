@@ -6,8 +6,6 @@ Rails.application.routes.draw do
     resources :post_responses, only: [:create]
   end
   resources :categories, only: [:show, :new]
-
-  get ":name", to: "regions#show", as: :region
   resources :regions, only: [:create] do
     resources :categories, only: [:create]
   end
@@ -15,6 +13,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
   resource :dashboard, only: [:show]
   resource :admin_dashboard, only: [:show]
+  get ":name", to: "regions#show", as: :region
 
   root to: "regions#index"
 end
