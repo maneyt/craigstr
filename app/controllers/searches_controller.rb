@@ -1,12 +1,16 @@
 class SearchesController < ApplicationController
   def show
-    @posts = Post.where("search_cache ILIKE ?","%#{ search_term }%")
+    @posts = Post.where(query_string, *search_terms)
   end
 
   private
 
-  def search_term
-    user_input = params[:q].split(" ")
-    user_input.join("%")
+  def query_string
+    condition = "search_cache ILIKE ?"
+    search_terms.length.times.map { condition }.join(" AND ")
+  end
+
+  def search_terms
+    params[:q].split.map { |term| "%#{term}%"}
   end
 end

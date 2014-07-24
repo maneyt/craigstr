@@ -3,6 +3,12 @@ class PostDenormalizer
     @post = post
   end
 
+  def search_cache
+    search_string.gsub(/ /, '').downcase
+  end
+
+  private
+
   def title
     @post.title
   end
@@ -19,14 +25,7 @@ class PostDenormalizer
     category.region
   end
 
-  def search_cache
-    search_string.gsub(/[ ]/, '').downcase
-  end
-
-  private
-
   def search_string
     body + title + category.title + region.name
   end
-
 end
