@@ -20,6 +20,7 @@
 <h2>All of the posts on craigstr</h2>
 
 <% @posts.each do |post| %>
+  <h3><%= link_to post.category.region.name, post.category.region %>/<%= link_to post.category.title, post.category %></h3>
   <div>
     <h4><%= post.title %></h4>
   </div>
