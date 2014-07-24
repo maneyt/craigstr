@@ -16,7 +16,7 @@ class RegionsController < ApplicationController
   end
 
   def show
-    @region = Region.find_by_param(params[:slug])
+    @region = Region.friendly.find(params[:slug])
     @category = Category.new
   end
 
