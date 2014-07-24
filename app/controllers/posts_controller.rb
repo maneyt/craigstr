@@ -4,7 +4,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @category = Category.find(params[:category_id])
   end
 
   def index

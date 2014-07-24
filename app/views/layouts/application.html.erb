@@ -11,9 +11,9 @@
   <h1><%= link_to "GregsList", root_path %></h1>
   <%= button_to "Post", [:posts], method: :get, class: "btn" %>
   <% if signed_in? %>
-  <p> Signed in as: <%= current_user.email %> </p>
-  <%= button_to "Sign out", :session, method: :delete, class: "btn" %>
-<% end %>
+    <p>Signed in as: <%= current_user.email %> </p>
+    <%= button_to "Sign out", :session, method: :delete, class: "btn" %>
+  <% end %>
 <%= yield %>
 </div>
 </body>

@@ -5,9 +5,7 @@ Rails.application.routes.draw do
     resources :spams, only: [:create]
     resources :post_responses, only: [:create]
   end
-  resources :categories, only: [:show, :new] do
-    resources :posts, only: [:new]
-  end
+  resources :categories, only: [:show, :new] 
   resources :regions, only: [:create, :show] do
     resources :categories, only: [:create]
   end
