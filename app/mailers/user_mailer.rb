@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "response@PovertyList.com"
+  default from: "POSTRESPONSE@GregsList.com"
 
   def post_response(post, response)
     @post = post
