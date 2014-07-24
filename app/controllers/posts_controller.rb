@@ -9,6 +9,11 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     @posts = Post.all
+    @users = User.all
+    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+      marker.lat 42.3581
+      marker.lng 71.0636
+    end
   end
 
   def destroy
