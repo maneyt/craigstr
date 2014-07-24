@@ -7,7 +7,7 @@ $(function(){
         "lat": "42.3584308",
         "lng": "-71.0636",
         "picture": {
-          "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+          "url": "http://www.googlemapsmarkers.com/v1/009900/",
           "width":  36,
           "height": 36
         },
