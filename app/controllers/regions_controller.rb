@@ -16,7 +16,7 @@ class RegionsController < ApplicationController
   end
 
   def show
-    @region = Region.find_by(name: params[:name])
+    @region = Region.find_by_param(params[:name])
     @category = Category.new
   end
 
