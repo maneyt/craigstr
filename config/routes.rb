@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
   resource :dashboard, only: [:show]
   resource :admin_dashboard, only: [:show]
-  get ":slug", to: "regions#show", as: :region
-  resource :search, only: [:show]
  
+  resource :search, only: [:show]
+
   root to: "regions#index"
+  get ":slug", to: "regions#show", as: :region
 end
