@@ -13,7 +13,6 @@ $(document).ready(function(){
         map: map,
         url: "http://localhost:3000/" + regions[i].slug
       });
-
       makeClickEvent(marker);
     }
   }
@@ -22,7 +21,5 @@ $(document).ready(function(){
       location.href = marker.url;
     });
   }
-  console.log(regions);
-
   google.maps.event.addDomListener(window, 'load', initialize);
 });
