@@ -21,8 +21,7 @@
   </div>
   <div id="search-form">
   <%= form_tag("/search", method: "get") do %>
-    <%= label_tag(:q, "Search posts:") %>
-    <%= text_field_tag(:q, "", class: "form-control") %>
+    <%= text_field_tag(:q, "Search posts", class: "form-control") %>
     <%= submit_tag("Search", class: "btn") %>
   <% end %>
   </div>

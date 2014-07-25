@@ -38,6 +38,7 @@ body {
 
 #search-form { 
   display: inline;
+  padding-right: 2em;
   float: right;
 }
 
