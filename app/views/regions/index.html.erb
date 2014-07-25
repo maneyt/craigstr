@@ -6,10 +6,8 @@
   <p>Search for apartments, jobs, and classifieds</p>
 </div>
 
-<div id="map" style="width: 800px; height: 400px;">
-</div>
-
-<script>markers = handler.addMarkers(<%= raw @map_hash.to_json %>);</script>
+<div id="map-canvas" style="height: 500px; width: 700px;"></div>
+<%= javascript_tag "var regions = #{raw @map_regions.to_json}" %>
 
 <% if signed_in? %>
   <% if current_user.admin? %>
