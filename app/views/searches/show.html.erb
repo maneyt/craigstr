@@ -1,6 +1,6 @@
 <h2>Results</h2>
 <% @posts.each do |post| %>
-  <%= link_to post.title, post %> |
+  <li><%= link_to post.title, post %></li> 
   <%= post.category.region.name %> |
   <%= post.category.title %> 
 <% end %>

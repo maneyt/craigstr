@@ -4,4 +4,8 @@ class Category < ActiveRecord::Base
 
   validates :title, presence: true
   validates :region_id, presence: true
+
+  def title_and_region
+    region.name + " | " + title 
+  end
 end
