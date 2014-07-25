@@ -1,4 +1,4 @@
-%w(bold black bolditalic italic regular).each do |style|
+%w(light bold black bolditalic italic regular).each do |style|
   with_extensions = [
     "fonts/lato/lato-#{style}.eot",
     "fonts/lato/lato-#{style}.woff",
