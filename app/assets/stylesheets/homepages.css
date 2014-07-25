@@ -13,3 +13,11 @@
 #post-responses {
   display: none;
 }
+
+#map-canvas {
+  margin-top: 100px;
+  height: 500px;
+  width: 700px;
+}
+
+

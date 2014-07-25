@@ -1,3 +1,4 @@
+<div id="map-canvas"></div>
 <div class="greg">
   <%= image_tag("craigs-list.png") %>
 </div>
@@ -13,7 +14,6 @@
   <% end %>
 <% end %>
 
-<div id="map-canvas" style="height: 500px; width: 700px;"></div>
 <%= javascript_tag do %>
   var regions = <%= raw @regions.to_json %>;
 <% end %>
