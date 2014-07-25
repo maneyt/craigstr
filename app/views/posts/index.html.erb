@@ -3,7 +3,8 @@
 <% if @post.errors.any? %>
   <%= render "error_messages", post: @post %>
 <% end %>
-
+<div id="map_canvas" z-index=1>
+ </div>
 <%= form_for @post do |form| %>
   <div>
     <%= collection_radio_buttons :post, :category_id, Category.all, :id, :title %>
