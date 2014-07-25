@@ -1,7 +1,9 @@
 $(document).ready(function(){
   function initialize() {
+    var defaultLat = 30;
+    var defaultLng = 0;
     var mapOptions = {
-      center: new google.maps.LatLng(40, 0),
+      center: new google.maps.LatLng(defaultLat, defaultLng),
       zoom: 2
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
