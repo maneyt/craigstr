@@ -32,6 +32,14 @@ body {
   float: right;
 }
 
+.sign_up_buttons {
+  padding-bottom: 50px;
+}
+
+#logo {
+  border-bottom: 1px solid #AAA;
+}
+
 #map-canvas {
   float: left;
 }
