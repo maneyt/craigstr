@@ -1,14 +1,17 @@
 body {
   font-family: Lato;
+  background-color: #E6E7E8;
 }
 
 .container {
-  width: 80em;
+  width: 8;
+  margin-top: 1em;
+  margin-bottom: 6em;
 }
 
 .button {
-  padding: .5em;
   float: left;
+  width: 5em;
 }
 
 .header {
@@ -23,4 +26,29 @@ body {
 .btn {
   margin-top: .5em;
   margin-bottom: .5em;
+}
+
+.greg {
+  float: right;
+  margin-left: 45em;
+}
+
+.post_button {
+  float: right;
+}
+
+#logo {
+  float: left;
+}
+
+#logo h1 {
+  display: inline;
+}
+
+.dashboard {
+  display: block;
+}
+
+.sign-out {
+  width: 300px;
 }

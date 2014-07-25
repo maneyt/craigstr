@@ -1,4 +1,4 @@
-<%= link_to "Sign up", [:new, :user] %>
+<%= link_to "Sign in", [:new, :user] %>
 <%= form_for :session, url: session_path do |form| %>
   <div>
     <%= form.email_field :email, placeholder: "Email", class: "form-control" %>

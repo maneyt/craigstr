@@ -1,4 +1,4 @@
-<h2>Add a new post</h2>
+<h3>Add a new post</h3>
 
 <% if @post.errors.any? %>
   <%= render "error_messages", post: @post %>
@@ -21,11 +21,11 @@
   </div>
 <% end %>
 
-<h2>All of the posts on craigstr</h2>
+<h3>All of the posts on GREGSlist</h3>
 
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:q, "Search posts:") %>
-  <%= text_field_tag(:q) %>
+  <%= text_field_tag(:q, "", class: "form-control") %>
   <%= submit_tag("Search", class: "btn") %>
 <% end %>
 

@@ -1,11 +1,9 @@
 <%= form_for @user do |form| %>
   <div>
-    <%= form.label :email %>
-    <%= form.email_field :email %>
+    <%= form.email_field :email, placeholder: "email", class: "form-control" %>
   </div>
   <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+    <%= form.password_field :password, placeholder: "password", class: "form-control" %>
   </div>
   <div>
     <%= form.submit "Sign up", class: "btn"  %>

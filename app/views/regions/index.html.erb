@@ -1,16 +1,7 @@
-<% if signed_in?%>
-  <% if current_user.admin? %>
-    <h4><%= link_to "Admin dashboard", :admin_dashboard, class: "link" %> |
-  <% end %>
-    <%= link_to "User dashboard", :dashboard %></h4>
-  <% else %>
-  <div class="button">
-    <%= button_to "Sign in", [:new, :session], method: :get, class: "btn" %>
+  <div class="greg">
+    <%= image_tag("craigs-list.png") %>
   </div>
-  <div class="button">
-    <%= button_to "Sign up", [:new, :user], method: :get, class: "btn" %>
-  </div>
-<% end %>
+
 
 <div class="header">
   <p>Search for apartments, jobs, and classifieds</p>
