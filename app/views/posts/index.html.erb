@@ -1,23 +1,26 @@
 <h3>Add a new post</h3>
-
-<% if @post.errors.any? %>
-  <%= render "error_messages", post: @post %>
+<p id="success"></p>
+<p id="error"></p>
+<%= form_for [@category, @post] do |form| %>
+  <% if @post.errors.any? %>
+    <%= render "error_messages", post: @post %>
+  <% end %>
 <% end %>
 
-<%= form_for @post do |form| %>
+<%= form_for @post, id: "new_post" do |form| %>
   <div>
     <%= collection_radio_buttons :post, :category_id, Category.all, :id, :title, label_class: "radio", input_type: "radio" %>
   </div>
   <div>
-    <%= form.text_field :title, placeholder: "Post Title", class: "form-control" %>
+    <%= form.text_field :title, placeholder: "Post Title", class: "form-control", id: "post_title" %>
   </div>
   <div>
-    <%= form.text_area :body, placeholder: "Post Body", class: "form-control" %>
+    <%= form.text_area :body, placeholder: "Post Body", class: "form-control", id: "post_body" %>
   </div>
   <div>
     <%= form.text_field :url, placeholder: "Enter Image URL", class: "form-control" %>
   <div>
-    <%= form.submit "Post", class: "btn" %>
+    <%= form.submit "Post", class: "btn", id: "submit_post"%>
   </div>
 <% end %>
 
@@ -29,6 +32,7 @@
   <%= submit_tag("Search", class: "btn") %>
 <% end %>
 
+<div id="posts_list"> 
 <% @posts.each do |post| %>
   <h3><%= link_to post.category.region.name, post.category.region %>/<%= link_to post.category.title, post.category %></h3>
   <div>
@@ -39,4 +43,5 @@
   </div>
     <p>Date posted: <%= time_tag post.created_at %></p>
   <div>
-<% end %>
+  <% end %>
+</div>
