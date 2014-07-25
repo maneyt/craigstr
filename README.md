@@ -1,6 +1,6 @@
-<h1>GREGSlist</h1>
+# GREGSlist
 
-<p>GREGSlist is a craigslist clone which allows users to create postings for jobs, housing, and items for sale.</p>
+GREGSlist is a craigslist clone which allows users to create postings for jobs, housing, and items for sale.
 
 ### It includes the following features:
 
@@ -17,6 +17,6 @@
   - Create categories and regions
   - Delete posts marked as spam
 
-<h2>Credits</h2>
+# Credits
 
 This project was created by [Thomas Maney](https://github.com/maneyt), [Anthony Zotti](https://github.com/amZotti), [Katherine Abu Hadal](https://github.com/katherineabuhadal).

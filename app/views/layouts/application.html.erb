@@ -13,30 +13,10 @@
       <h1><%= link_to "GREGSlist", root_path %></h1>
     </div>
     <div class="post_button">
-      <%= button_to "POST", [:posts], method: :get, class: "btn btn-embossed btn-primary btn-wide" %>
+      <%= button_to "POST", :posts, method: :get, class: "btn btn-embossed btn-primary btn-wide" %>
     </div>
   </div>
-  <div class="dashboard">
-    <% if signed_in?%>
-       <div class="sign-out">
-          Signed in as: <%= current_user.email %>
-          <%= button_to "Sign out", :session, method: :delete, class: "btn" %>
-       </div>
-          <% if current_user.admin? %>
-            <h4><%= link_to "Admin dashboard", :admin_dashboard, class: "link" %> |
-          <% end %>
-        <%= link_to "User dashboard", :dashboard %></h4>
-      <% else %>
-          <div class="sign_up_buttons">
-          <div class="button">
-            <%= button_to "Sign in", [:new, :session], method: :get, class: "btn" %>
-          </div>
-          <div class="button">
-            <%= button_to "Sign up", [:new, :user], method: :get, class: "btn" %>
-          </div>
-        </div>
-     <% end %>
-  </div>
+  <%= render 'layouts/header' %>
   <%= yield %>
 </div>
 </body>
