@@ -3,12 +3,6 @@ class RegionsController < ApplicationController
 
   def index
     @regions = Region.all
-    @map_regions = []
-    @regions.each do |region|
-      if region.latitude
-        @map_regions << region
-      end
-    end
     @region = Region.new
   end
 

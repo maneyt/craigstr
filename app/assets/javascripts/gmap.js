@@ -2,8 +2,8 @@ $(document).ready(function(){
   var map;
   function initialize() {
     var mapOptions = {
-      center: new google.maps.LatLng(-34.397, 150.644),
-      zoom: 1
+      center: new google.maps.LatLng(40, 0),
+      zoom: 2
     };
     map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
@@ -11,14 +11,16 @@ $(document).ready(function(){
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(regions[i].latitude, regions[i].longitude),
         map: map,
-        url: "localhost:3000/" + regions[i].slug
+        url: "http://localhost:3000/" + regions[i].slug
       });
 
-      google.maps.event.addListener(marker, 'click', function() {
-        console.log(marker);
-        // window.open(regionUrl);
-      });
+      makeClickEvent(marker);
     }
+  }
+  function makeClickEvent(marker){
+    google.maps.event.addListener(marker, 'click', function() {
+      location.href = marker.url;
+    });
   }
   console.log(regions);
 
