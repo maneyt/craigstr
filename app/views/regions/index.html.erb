@@ -6,6 +6,11 @@
   <p>Search for apartments, jobs, and classifieds</p>
 </div>
 
+<div id="map" style="width: 800px; height: 400px;">
+</div>
+
+<script>markers = handler.addMarkers(<%= raw @map_hash.to_json %>);</script>
+
 <% if signed_in? %>
   <% if current_user.admin? %>
     <h4>Add a new region</h4>

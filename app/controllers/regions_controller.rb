@@ -4,6 +4,10 @@ class RegionsController < ApplicationController
   def index
     @regions = Region.all
     @region = Region.new
+    @map_hash = Gmaps4rails.build_markers(@regions) do |region, marker|
+      marker.lat region.latitude
+      marker.lng region.longitude
+    end
   end
 
   def create
