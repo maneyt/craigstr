@@ -1,10 +1,10 @@
 $(document).ready(function(){
-var map;
+  var map;
   function initialize() {
     var mapOptions = {
       center: new google.maps.LatLng(-34.397, 150.644),
       zoom: 1
-     };
+    };
     map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
     for(var i = 0; i< regions.length; i++){
