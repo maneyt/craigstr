@@ -10,7 +10,7 @@ $(document).ready(function(){
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(regions[i].latitude, regions[i].longitude),
         map: map,
-        url: "http://localhost:3000/" + regions[i].slug
+        url: "http://" + location.host + "/" + regions[i].slug
       });
       makeClickEvent(marker);
     }
