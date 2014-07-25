@@ -23,12 +23,6 @@
 
 <h3>All of the posts on GREGSlist</h3>
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search posts:") %>
-  <%= text_field_tag(:q, "", class: "form-control") %>
-  <%= submit_tag("Search", class: "btn") %>
-<% end %>
-
 <% @posts.each do |post| %>
   <h3><%= link_to post.category.region.name, post.category.region %>/<%= link_to post.category.title, post.category %></h3>
   <div>
