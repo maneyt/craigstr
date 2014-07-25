@@ -52,3 +52,7 @@ body {
 .sign-out {
   width: 300px;
 }
+
+.form-control {
+  width: 400px;
+}

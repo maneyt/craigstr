@@ -1,7 +1,6 @@
-  <div class="greg">
-    <%= image_tag("craigs-list.png") %>
-  </div>
-
+<div class="greg">
+  <%= image_tag("craigs-list.png") %>
+</div>
 
 <div class="header">
   <p>Search for apartments, jobs, and classifieds</p>
@@ -10,7 +9,7 @@
 <% if signed_in? %>
   <% if current_user.admin? %>
     <h4>Add a new region</h4>
-    <%= render "new_region", region: @region %>
+      <%= render "new_region", region: @region %>
   <% end %>
 <% end %>
 
