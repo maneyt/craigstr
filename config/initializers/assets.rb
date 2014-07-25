@@ -1,3 +1,4 @@
+Rails.application.config.assets.precompile += %w( fonts/flat-ui-icons-regular.ttf )
 Rails.application.config.assets.precompile += %w( fonts/flat-ui-icons-regular.woff )
 Rails.application.config.assets.precompile += %w( fonts/flat-ui-icons-regular.eot )
 %w(light bold black bolditalic italic regular).each do |style|
