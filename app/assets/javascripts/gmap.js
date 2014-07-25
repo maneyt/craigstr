@@ -7,14 +7,19 @@ var map;
      };
     map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
-    var i;
-    for(i = 0; i< regions.length; i++){
+    for(var i = 0; i< regions.length; i++){
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(regions[i].latitude, regions[i].longitude),
-        map: map
+        map: map,
+        url: "localhost:3000/" + regions[i].slug
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        console.log(marker);
+        // window.open(regionUrl);
       });
     }
-    }
+  }
   console.log(regions);
 
   google.maps.event.addDomListener(window, 'load', initialize);

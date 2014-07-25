@@ -6,15 +6,15 @@
   <p>Search for apartments, jobs, and classifieds</p>
 </div>
 
-<div id="map-canvas" style="height: 500px; width: 700px;"></div>
-<%= javascript_tag "var regions = #{raw @map_regions.to_json}" %>
-
 <% if signed_in? %>
   <% if current_user.admin? %>
     <h4>Add a new region</h4>
       <%= render "new_region", region: @region %>
   <% end %>
 <% end %>
+
+<div id="map-canvas" style="height: 500px; width: 700px;"></div>
+<%= javascript_tag "var regions = #{raw @map_regions.to_json}" %>
 
 <h4>Regions</h4>
 <%= render @regions %>
