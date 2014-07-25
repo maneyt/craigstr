@@ -1,14 +1,14 @@
 $(document).ready(function(){
   function initialize() {
     var defaultLat = 30;
-    var defaultLng = 0;
+    var defaultLng = -20;
     var mapOptions = {
       center: new google.maps.LatLng(defaultLat, defaultLng),
       zoom: 2
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
-    for(var i = 0; i< regions.length; i++){
+    for(var i = 0; i < regions.length; i++){
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(regions[i].latitude, regions[i].longitude),
         map: map,
