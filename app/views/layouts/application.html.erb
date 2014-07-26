@@ -21,8 +21,9 @@
   </div>
   <div id="search-form">
   <%= form_tag("/search", method: "get") do %>
-    <%= text_field_tag(:q, "Search posts", class: "form-control") %>
+    <%= text_field_tag(:q, "", placeholder: "Search", class: "form-control") %>
     <%= submit_tag("Search", class: "btn") %>
+   Try searching for "metis in boston" or "metis"
   <% end %>
   </div>
   <%= render 'layouts/header' %>
