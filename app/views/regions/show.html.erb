@@ -1,3 +1,4 @@
+<div class="page">
 <h3> <%= @region.name %> </h3>
 <% if signed_in? %>
   <% if current_user.admin? %>
@@ -7,3 +8,4 @@
 <ul>
   <%= render @region.categories %>
 </ul>
+</div>

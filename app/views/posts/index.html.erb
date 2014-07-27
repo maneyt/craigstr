@@ -1,4 +1,5 @@
-<h3>Add a new post</h3>
+<div class="page">
+  <h3>Add a new post</h3>
 
 <% if @post.errors.any? %>
   <%= render "error_messages", post: @post %>
@@ -33,4 +34,5 @@
   </div>
     <p>Date posted: <%= time_tag post.created_at %></p>
   <div>
-<% end %>
+  <% end %>
+</div>

@@ -1,24 +1,24 @@
-<div class="header">
-  <p>Search for apartments, jobs, and classifieds</p>
-</div>
-<div>
+<div class="page">
   <div id="map-canvas"></div>
-  <div class="greg">
+  <p class="map-text">Click on a city on the map to be directed to listings for that city!</p>
+    <div class="greg">
     <%= image_tag("craigs-list.png") %>
     <p>Hi, I'm Greg. This is my list, take a look around.</p>
   </div>
-</div>
-
-<% if signed_in? %>
-  <% if current_user.admin? %>
-    <h4>Add a new region</h4>
-      <%= render "new_region", region: @region %>
+  <div class="regions">
+  <% if signed_in? %>
+    <% if current_user.admin? %>
+      <h4>Add a new region</h4>
+        <%= render "new_region", region: @region %>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= javascript_tag do %>
-  var regions = <%= raw @regions.to_json %>;
-<% end %>
+  <%= javascript_tag do %>
+    var regions = <%= raw @regions.to_json %>;
+  <% end %>
 
-<h4>Regions</h4>
-<%= render @regions %>
+  <a name="regions"><h3>Regions</h3></a>
+  <p>Select your region in order to create a new post, or just browse current listings.</p>
+  <p><%= render @regions %></p>
+  </div>
+</div>

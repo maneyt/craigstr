@@ -3,7 +3,10 @@
      <div class="sign-out">
         Signed in as: <%= current_user.email %>
         <%= button_to "Sign out", :session, method: :delete, class: "btn" %>
-     </div>
+      </div>
+  <div class="header">
+    <p>Search for apartments, jobs, and classifieds</p>
+  </div>
         <% if current_user.admin? %>
           <h4><%= link_to "Admin dashboard", :admin_dashboard, class: "link" %> |
         <% end %>

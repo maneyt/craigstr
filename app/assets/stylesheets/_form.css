@@ -1,12 +1,11 @@
 body {
-  font-family: Lato;
-  background-color: #E6E7E8;
+  @include outer-container;
 }
 
 .container {
-  width: 8;
-  margin-top: 1em;
-  margin-bottom: 6em;
+  @include span-columns(12);
+  background-color: #E6E7E8;
+  padding: 30px;
 }
 
 .button {
@@ -14,18 +13,20 @@ body {
   width: 5em;
 }
 
+.nav-menu {
+  @include span-columns(12);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background: $dark-gray;
+  padding: 20px;
+}
+
 .header {
-  clear: left;
+  @include span-columns(3);
+  font-size: 20px;
 }
-
-.form-control {
-  margin-top: .5em ;
-  margin-bottom: .5em;
-}
-
-.btn {
-  margin-top: .5em;
-  margin-bottom: .5em;
+.sign_up_buttons .button {
+  margin-right: 20px;
 }
 
 .greg {
@@ -38,6 +39,7 @@ body {
 
 #logo {
   margin-right: 30px;
+  margin-left: 10px;
 }
 
 #map-canvas {
@@ -45,9 +47,13 @@ body {
 }
 
 #search-form { 
-  display: inline;
   padding-right: 2em;
-  float: right;
+  @include span-columns(5.5);
+}
+
+#search-form h5 {
+  color: white;
+  padding-bottom: 5px;
 }
 
 .post_button {
@@ -60,6 +66,8 @@ body {
 
 #logo h1 {
   display: inline;
+  font-size: 80px;
+  margin-left: 5px;
 }
 
 .dashboard {
@@ -67,9 +75,37 @@ body {
 }
 
 .sign-out {
-  width: 300px;
+  @include span-columns(4);
+  float: left;
+}
+
+.dashboard h4 {
+  @include span-columns(5);
+  margin-bottom: 30px;
 }
 
 .form-control {
   width: 400px;
+}
+
+.page {
+  @include span-columns(12);
+}
+
+.map-text {
+  @include span-columns(11);
+  @include shift(.5);
+  display: block;
+  background: $dark-gray;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px;
+  padding-left: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.regions {
+  @include span-columns(6);
 }
