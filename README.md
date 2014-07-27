@@ -2,6 +2,8 @@
 
 GREGSlist is a craigslist clone which allows users to create postings for jobs, housing, and items for sale.
 
+View the app on heroku: [GREGSlist](http://murmuring-mesa-7348.herokuapp.com/)
+
 ### It includes the following features:
 
 + Users can sign up and sign in (authentication is through monban).
@@ -20,3 +22,8 @@ GREGSlist is a craigslist clone which allows users to create postings for jobs, 
 # Credits
 
 This project was created by [Thomas Maney](https://github.com/maneyt), [Anthony Zotti](https://github.com/amZotti), [Katherine Abu Hadal](https://github.com/katherineabuhadal).
+
+# Screenshots
+
+![GREGSlist](/app/assets/images/screen_shot_1.png)
+![GREGSlist](/app/assets/images/screen_shot_2.png)

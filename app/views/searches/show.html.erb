@@ -1,6 +1,8 @@
-<h4>Search Results</h4>
-<% @posts.each do |post| %>
-  <li><%= link_to post.title, post %></li> 
+<div class="page">
+  <h4>Search Results</h4>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.title, post %></li> 
   <%= post.category.region.name %> |
   <%= post.category.title %> 
 <% end %>
+</div>

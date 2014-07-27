@@ -16,7 +16,11 @@
 
 #map-canvas {
   height: 470px;
-  width: 700px;
-  margin-right: 60px;
-  margin-bottom: 10px;
+  @include span-columns(11);
+  @include shift(.5);
+  margin-right: 0px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  margin-top: 20px;
+  display: block;
 }

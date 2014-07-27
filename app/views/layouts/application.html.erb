@@ -10,22 +10,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
   <div class="nav-menu">
     <div id="logo">
       <h1><%= link_to "GREGSlist", root_path %></h1>
     </div>
+  <div id="search-form">
+    <h5>Try searching for "metis in boston" or "metis"</h5>
+    <%= form_tag("/search", method: "get") do %>
+    <%= text_field_tag(:q, "", placeholder: "Search", class: "form-control") %>
+    <%= submit_tag("Search", class: "btn") %>
+  <% end %>
+  </div>
     <div class="post_button">
       <%= button_to "POST", "/#regions", method: :get, class: "btn btn-embossed btn-primary btn-wide" %>
     </div>
   </div>
-  <div id="search-form">
-  <%= form_tag("/search", method: "get") do %>
-    <%= text_field_tag(:q, "", placeholder: "Search", class: "form-control") %>
-    <%= submit_tag("Search", class: "btn") %>
-   Try searching for "metis in boston" or "metis"
-  <% end %>
-  </div>
+<div class="container">
   <%= render 'layouts/header' %>
   <%= yield %>
 </div>
